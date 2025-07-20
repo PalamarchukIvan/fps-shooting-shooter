@@ -7,12 +7,13 @@
 [sub_resource type="BoxMesh" id="BoxMesh_qhqgy"]
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00290382, -5.96046e-08, 0.0140826)
+transform = Transform3D(0.000244335, 0, -1, 0, 1, 0, 1, 0, 0.000244335, 0.00290382, -5.96046e-08, 0.0140826)
 script = ExtResource("1_3vyb7")
 input_left = "move_left"
 input_right = "move_right"
 input_forward = "move_forward"
 input_back = "move_backward"
+is_debug_enabled = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.5, 0)
