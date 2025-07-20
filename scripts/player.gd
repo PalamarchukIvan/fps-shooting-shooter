@@ -64,7 +64,6 @@ func move_character(delta: float) -> void:
 		
 	# if player is falling => increase grav power
 	if velocity.y < 0: 
-		print(velocity)
 		grav_pow = 2
 	else: 
 		grav_pow = 1
