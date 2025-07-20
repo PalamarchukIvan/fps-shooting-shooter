@@ -23,7 +23,6 @@ var look_rotation : Vector2
 func _ready() -> void:
 	look_rotation = Vector2(camera.rotation.y, camera.rotation.x)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # hiding the mouse
-	pass # Replace with function body.
 
 
 func _unhandled_input(event: InputEvent) -> void:
