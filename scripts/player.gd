@@ -18,12 +18,11 @@ extends CharacterBody3D
 @onready var colider: CollisionShape3D = $CollisionShape3D
 
 var look_rotation : Vector2
-		
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	look_rotation = Vector2(camera.rotation.y, camera.rotation.x)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # hiding the mouse
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
