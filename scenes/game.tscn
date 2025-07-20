@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu2874ytlrvk5"]
+[gd_scene load_steps=5 format=3 uid="uid://cu2874ytlrvk5"]
 
 [ext_resource type="Script" uid="uid://rnuv864f1cvp" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://ej1cuikv731j" path="res://scenes/player.tscn" id="2_yqjtg"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_lnu2h"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lbhrr"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_uwrxv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_lnu2h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00435638, 2.38419e-07, 0.00197625)
+mesh = SubResource("PlaneMesh_lbhrr")
+
+[node name="Player" parent="." instance=ExtResource("2_yqjtg")]
