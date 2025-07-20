@@ -2,7 +2,6 @@ extends Node3D
 
 
 func _ready() -> void:
-	print("Hello world! P.S. hello from oleksii :D :D")
 	pass # Replace with function body.
 
 
