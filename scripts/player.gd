@@ -19,7 +19,7 @@ extends CharacterBody3D
 
 # properties 
 var look_rotation : Vector2
-var grav_pow: float = 1 
+var grav_pow: float = 2 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -64,9 +64,9 @@ func move_character(delta: float) -> void:
 		
 	# if player is falling => increase grav power
 	if velocity.y < 0: 
-		grav_pow = 2
+		grav_pow = 4
 	else: 
-		grav_pow = 1
+		grav_pow = 2
 		 
 	velocity += get_gravity() * grav_pow * delta 
 	
